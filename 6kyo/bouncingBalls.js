@@ -23,5 +23,22 @@
 // (Condition 2) not fulfilled).
 
 function bouncingBall(h, bounce, window) {
-  if (h === 0 || bounce === 0 || bounce === 1 || window >= h) return -1;
+  if (h === 0 || bounce <= 0 || bounce === 1 || window >= h) return -1;
+  let timesWillSee = 1;
+  h *= bounce;
+  while (h > window) {
+    timesWillSee += 2;
+    h *= bounce;
+  }
+  return timesWillSee;
 }
+
+console.log(bouncingBall(3, 0.66, 1.5));
+console.log(bouncingBall(3, 1, 1.5));
+
+// top in codewars
+// function bouncingBall(h,  bounce,  window) {
+//     var rebounds = -1;
+//     if (bounce > 0 && bounce < 1) while (h > window) rebounds+=2, h *= bounce;
+//     return rebounds;
+//   }
