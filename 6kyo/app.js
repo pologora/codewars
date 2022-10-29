@@ -1,5 +1,9 @@
-function cockroachSpeed(s) {
-  
+function count(string) {
+  string = string.split("");
+  return string.reduce((acc, char) => {
+    acc.hasOwnProperty(char) ? acc[char]++ : (acc[char] = 1);
+    return acc;
+  }, {});
 }
 
-console.log(cockroachSpeed(3));
+console.log(count("aba"));
