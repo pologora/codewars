@@ -1,9 +1,14 @@
-function count(string) {
-  string = string.split("");
-  return string.reduce((acc, char) => {
-    acc.hasOwnProperty(char) ? acc[char]++ : (acc[char] = 1);
-    return acc;
-  }, {});
+const str = "abcd";
+
+function accum(s) {
+  let result = s[0].toUpperCase();
+  for (let i = 0; i < s.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (j === 0) result += `-${s[i].toUpperCase()}`;
+      result += s[i].toLowerCase();
+    }
+  }
+  return result;
 }
 
-console.log(count("aba"));
+console.log(accum(str));
