@@ -1,14 +1,6 @@
-const str = "abcd";
+console.log(Array.from({ length: 5 }, (_, i) => 2 ** i));
+// function powersOfTwo(n) {
+//   return Array.from({length: n + 1}, (v, k) => 2 ** k);
+// }
 
-function accum(s) {
-  let result = s[0].toUpperCase();
-  for (let i = 0; i < s.length; i++) {
-    for (let j = 0; j < i; j++) {
-      if (j === 0) result += `-${s[i].toUpperCase()}`;
-      result += s[i].toLowerCase();
-    }
-  }
-  return result;
-}
-
-console.log(accum(str));
+// console.log(powersOfTwo(5))
