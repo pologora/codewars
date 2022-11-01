@@ -1,6 +1,5 @@
-console.log(Array.from({ length: 5 }, (_, i) => 2 ** i));
-// function powersOfTwo(n) {
-//   return Array.from({length: n + 1}, (v, k) => 2 ** k);
-// }
-
-// console.log(powersOfTwo(5))
+function oddOrEven(array) {
+  const result = array.reduce((acc, num) => acc + num, 0);
+  return result % 2 ? 'odd' : 'even';
+}
+console.log(oddOrEven([0, -1, -5]));
