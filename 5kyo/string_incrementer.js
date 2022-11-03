@@ -16,11 +16,13 @@
 // foo099 -> foo100
 
 // Attention: If the number has leading zeros the amount of digits should be considered.
+
 function incrementString(strng) {
   const chars = strng.replace(/\d+$/, '');
   const number = strng.replace(chars, '');
 
   if (number === '') return chars + 1;
+
   const newNumber = (Number(number) + 1)
     .toString()
     .padStart(number.length, '0');
@@ -28,8 +30,14 @@ function incrementString(strng) {
   return chars + newNumber;
 }
 
-console.log(incrementString('he55llo2'));
 //some tops
-const incrementString = (s) => s.replace(/[0-8]?9*$/, (m) => String(++m));
-let incrementString = (str) =>
-  str.replace(/([0-8]|\d?9+)?$/, (e) => (e ? +e + 1 : 1));
+// const incrementString = (s) => s.replace(/[0-8]?9*$/, (m) => String(++m));
+
+// let incrementString = (str) =>
+//   str.replace(/([0-8]|\d?9+)?$/, (e) => {
+//     console.log(e);
+//     return e ? +e + 1 : 1;
+//   });
+
+const strr = 'he55llo0002'.replace(/([0-8]|\d?9+)?$/, '');
+console.log(strr);
