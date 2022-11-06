@@ -1,5 +1,7 @@
-String.prototype.isUpperCase = function () {
-  return this + '' === this.toLocaleUpperCase();
+var isSquare = function (arr) {
+  return arr.length > 0
+    ? arr.every((el) => Number.isInteger(Math.sqrt(el)))
+    : undefined;
 };
 
-console.log('HI'.isUpperCase());
+console.log(Number.isInteger([]));
