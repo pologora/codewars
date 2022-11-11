@@ -1,7 +1,9 @@
-var isSquare = function (arr) {
-  return arr.length > 0
-    ? arr.every((el) => Number.isInteger(Math.sqrt(el)))
-    : undefined;
-};
+function getMiddle(s) {
+  const stringLength = s.length;
+  const middleChar = s[Math.floor(stringLength / 2)];
+  const twoMiddleChars =
+    s[Math.floor(stringLength / 2) - 1] + s[Math.floor(stringLength / 2)];
+  return s.length % 2 ? middleChar : twoMiddleChars;
+}
 
-console.log(Number.isInteger([]));
+console.log(getMiddle('abcdem'));
