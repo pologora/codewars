@@ -1,10 +1,16 @@
-function solution(number) {
-  let sum = 0;
-  for (let i = 3; i < number; i++) {
-    if (i % 3 === 0 || i % 5 === 0) sum += i;
-  }
+const s = 'ab',
+  t = 'baab';
 
-  return sum;
+function isSubsequence(s, t) {
+  let result = '';
+  for (let i = 0; i < t.length; i++) {
+    const char = t[i];
+    if (s.includes(char)) {
+      result += char;
+    }
+  }
+  console.log(result);
+  return s === result;
 }
 
-console.log(solution(10));
+console.log(isSubsequence(s, t));
