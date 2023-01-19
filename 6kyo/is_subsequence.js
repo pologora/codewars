@@ -16,4 +16,20 @@ function isSubsequence(s, t) {
   return true;
 }
 
+// function isSubsequence(s, t) {
+//     // Initialize pointer j to keep track of current character in s
+//     let j = 0;
+//     // Iterate through characters in t
+//     for (let i = 0; i < t.length && j < s.length; i++) {
+//         // Check if current character in t matches current character in s
+//         if (t[i] === s[j]) {
+//             // If match found, increment pointer for s
+//             j++;
+//         }
+//     }
+//     // Return true if all characters in s have been found in t
+//     return j === s.length;
+// }
+
+
 console.log(isSubsequence(s, t));
